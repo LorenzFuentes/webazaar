@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="resource/css/homepage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="resource/img/logo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
@@ -25,15 +26,15 @@
         <div class="collapse navbar-collapse align-items-center justify-content-center" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item pr-3 ">
-              <a class="nav-link text-light" href="#">HOME</a>
+              <a class="nav-link text-light" href="index.php">HOME</a>
             </li>
             <li class="nav-item dropdown pr-3 ">
               <a class="nav-link dropdown-toggle text-light " href="#" role="button" data-toggle="dropdown" aria-expanded="false">SHOP</a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">WOMENS</a>
-                <a class="dropdown-item" href="#">MENS</a>
+                <a class="dropdown-item" href="product.php">WOMENS</a>
+                <a class="dropdown-item" href="product.php">MENS</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">ACCESORIES</a>
+                <a class="dropdown-item" href="product.php">ACCESORIES</a>
               </div>
             </li>
             <li class="nav-item pr-3 ">
