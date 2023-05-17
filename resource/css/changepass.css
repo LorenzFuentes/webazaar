@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  #heading {
+    font-family: "myFirstfont";
+    text-align: center;
+    margin-top: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: bolder;
+  }
+
+  .form-control{
+    background: #AAC4FF;
+  }
+  .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+  }
+
+  .wave svg {
+      position: relative;
+      display: block;
+      width: calc(183% + 1.3px);
+      height: 132px;
+  }
+
+  .wave .shape-fill {
+      fill: #000;
+  }
+  @font-face {
+    font-family: "myFirstfont";
+    src: url(../font/TreadingDemoSerif-MVlZP.ttf);
+  }
