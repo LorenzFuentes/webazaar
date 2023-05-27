@@ -9,11 +9,24 @@
     text-rendering: optimizeLegibility;
     font-family: 'Poppins', sans-serif;
   }
-  
+  body {
+    background: #000000;
+  }
   header {
     min-height: 100vh;
     width: 100%;
     background-color: #000000;
+  }
+  .header-products{
+    font-family: "myFirstfont";
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    background: -webkit-linear-gradient(#AAC4FF, #FFFBEB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   
   nav{
@@ -43,9 +56,19 @@
     padding-bottom: 0;
   }
   
+  .filter{
+    font-family: "myFirstfont";
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    background: -webkit-linear-gradient(#AAC4FF, #FFFBEB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .header-name{
     font-family: "myFirstfont";
-    font-size: 90px;
+    font-size: 70px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -191,6 +214,261 @@
     background:  #AAC4FF;
   }
 
+
+/*Buttons*/
+.btn-3 {
+  background: #AAC4FF;
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, #AAC4FF 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  margin-bottom: 10px;
+}
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-family: "myFirstfont";
+  font-weight: 800;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: #AAC4FF;
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover{
+   background: transparent;
+  box-shadow: none;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover{
+   color: #AAC4FF;
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: #AAC4FF;
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
+}
+
+.return{
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  z-index: 99;
+  font-size:25px;
+}
+i {
+  margin-right: 10px;
+}
+.return a:link,
+.return a:visited{
+  color:#AAC4FF;
+  text-decoration: none;
+}
+.return a:hover{
+  color:#5876ba;
+  text-decoration: none;
+  transition: 0.5s;
+}
+form {
+  padding: 1rem;
+}
+
+/* RESET RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+.prod-btn {
+  cursor: pointer;
+  background: none;
+  -webkit-filter: invert(100%); /* Safari/Chrome */
+  filter: invert(100%);
+}
+
+.images {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.product-section {
+  padding: 2rem;
+  background-color: #000000;
+}
+
+.container {
+  max-width: 1030px;
+  margin: 0 auto;
+}
+
+.d-none {
+  display: none;
+}
+
+
+/* TOOLBAR
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.view-options {
+  display: flex;
+  align-items: center;
+}
+
+.view-options li:not(:last-child) {
+  margin-right: 1.2rem;
+}
+
+.view-options button {
+  padding: 2px;
+  border: 3px solid transparent;
+}
+
+.view-options .active button {
+  border-color: var(--darkgreen);
+}
+
+
+/* IMAGE LIST
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.image-list {
+  margin: 3rem 0;
+}
+
+.image-list li {
+  background: #1c1c1c;
+  color: var(--darkblack);
+  padding: 1rem;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.descp {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  text-align: justify;
+}
+.price{
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+/* GRID VIEW
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.grid-view {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(var(--minRangeValue), 1fr));
+}
+
+.grid-view .caption {
+  padding: 2rem;
+}
+
+
+/* LIST VIEW
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.list-view li + li {
+  margin-top: 1.5rem;
+}
+
+.list-view figure {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+}
+
+/* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 900px) {
+  .toolbar input[type="range"] {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .grid-view li {
+    text-align: center;
+    padding: 0.5rem;
+  }
+  
+  .grid-view .caption {
+    padding: 0.5rem 0 0;
+  }
+}
+/*TEST*/
+/*FOOTER*/
+.footer{
+  margin-top: 3rem;
+  color:#000;
+  background-color: #fff;
+  padding: 2rem;
+}
+
+.list-style{
+  list-style-type: none!important;
+  cursor :pointer;
+  font-size: .75rem;
+  opacity: .8;
+}
+/*FOOTER*/
 
 
   @font-face {

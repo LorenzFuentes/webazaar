@@ -16,6 +16,7 @@ $view = new view;
    <link rel="stylesheet" type="text/css"  href="resource/css/register.css">
    <link rel="stylesheet" type="text/css"  href="vendor/css/bootstrap-select.min.css">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="icon" type="image/x-icon" href="resource/img/logo.png">
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
    <script src="https://kit.fontawesome.com/400dff856d.js" crossorigin="anonymous"></script>
@@ -56,17 +57,13 @@ $view = new view;
                             <div class="row justify-content-center  mt-4 ">
                                 <div class="form-group col-4">
 
-                                 <input class="form-control" placeholder="Full name" type = "text" name="fullName" id="fullName" value ="<?php echo input::get('fullName');?>"/required>
+                                 <input class="form-control" placeholder="Full name" type = "text" name="fullName" id="fullName" value ="<?php echo input::get('fullName');?>"required/>
                                 </div>
                                 <div class="form-group col-4">
 
-                                 <input class="form-control"  placeholder="Email Address"  type = "text" name="email" id="email" value ="<?php echo input::get('email');?>"/required>
+                                 <input class="form-control"  placeholder="Email Address"  type = "text" name="email" id="email" value ="<?php echo input::get('email');?>"required/>
                                 </div>
-                                <div class="form-group col-4">
-                                      <select id="College" name="College[]" class="selectpicker form-control" data-live-search="true" multiple required>
-                                        <?php $view->collegeSP2();?>
-                                      </select>
-                                </div>
+
                              </div>
                         </td>
                     </tr>
