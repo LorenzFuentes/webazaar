@@ -25,6 +25,7 @@ $user = new user();
 
  </head>
  <body>
+
  <nav class="navbar navbar-expand-lg navbar-light">
           <button class="navbar-toggler navbar-light text-center" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon  text-center"></span>
@@ -69,6 +70,9 @@ $user = new user();
         </nav>
     <div class="container mt-5 pt-5">
         <?php updateProfile();?>
+
+    <div class="container mt-5 pt-5">
+
         <h1 class="text-center text-dark mt-4"  id="heading">UPDATE YOUR ACCOUNT</h1>
         <hr>
         <div class="row">
@@ -79,10 +83,17 @@ $user = new user();
                 <input class="form-control"  type = "text" name="username" id="username" value ="<?php echo escape($user->data()->username); ?>" placeholder="Username" autocomplete="off"  />
                 </div>
                 <div class="col">
+
                 <input class="form-control"  type = "text" name="fullName" id="fullName" value ="<?php echo escape($user->data()->name); ?>" placeholder="Full Name">
                 </div>
                 <div class="col">
                 <input class="form-control"  type = "text" name="email" id="email" value ="<?php echo escape($user->data()->email); ?>" placeholder="Email">
+
+                <input class="form-control"  type = "text" name="fullName" id="fullName" value ="<?php echo escape($user->data()->name); ?>" placeholder="Full Name"/required>
+                </div>
+                <div class="col">
+                <input class="form-control"  type = "text" name="email" id="email" value ="<?php echo escape($user->data()->email); ?>" placeholder="Email"/required>
+
                 </div>
             </div>
             <div class="row justify-content-center">
