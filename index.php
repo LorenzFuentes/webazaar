@@ -1,3 +1,7 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'].'/webazaar/resource/php/class/core/init.php';
+isLogin();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -31,14 +35,14 @@
             <li class="nav-item dropdown pr-3 ">
               <a class="nav-link dropdown-toggle text-light " href="#" role="button" data-toggle="dropdown" aria-expanded="false">SHOP</a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="product.php">WOMENS</a>
-                <a class="dropdown-item" href="product.php">MENS</a>
+                <a class="dropdown-item" href="product.php#women">WOMENS</a>
+                <a class="dropdown-item" href="product.php#men">MENS</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="product.php">ACCESORIES</a>
+                <a class="dropdown-item" href="product.php#accesories">ACCESORIES</a>
               </div>
             </li>
             <li class="nav-item pr-3 ">
-              <a class="nav-link text-light " href="#">FEATURES</a>
+              <a class="nav-link text-light " href="cart.php">CART</a>
             </li>
             <li class="nav-item pr-3 ">
               <a class="nav-link text-light ">BLOG</a>
@@ -55,7 +59,7 @@
                 <a class="dropdown-item" href="updateprofile.php">UPDATE PROFILE</a>
                 <a class="dropdown-item" href="changepassword.php">UPDATE PASSWORD</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">LOG-OUT</a>
+                <a class="dropdown-item" href="logout.php">LOG-OUT</a>
               </div>
             </li>
           </ul>
@@ -228,7 +232,7 @@
            <h5 class="pb-3"> OTHERS </h5>
             <ul class="list-style ps-0">
               <li class="pb-3">BLOG</li>
-              <li class="pb-3">FEATURES</li>
+              <li class="pb-3">Cart</li>
               <li class="pb-3">ABOUT</li>
               <li class="pb-3">CONTACT</li>
             </ul>

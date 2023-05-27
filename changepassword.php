@@ -22,6 +22,50 @@ $user = new user();
     <title> Change Password </title>
  </head>
  <body>
+
+ <nav class="navbar navbar-expand-lg navbar-light">
+          <button class="navbar-toggler navbar-light text-center" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon  text-center"></span>
+          </button>
+          <div class="collapse navbar-collapse align-items-center justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item pr-3 ">
+                <a class="nav-link text-light" href="index.php">HOME</a>
+              </li>
+              <li class="nav-item dropdown pr-3 ">
+                <a class="nav-link dropdown-toggle text-light " href="product.php" role="button" data-toggle="dropdown" aria-expanded="false">SHOP</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#women">WOMENS</a>
+                  <a class="dropdown-item" href="#men">MENS</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#accesories">ACCESORIES</a>
+                </div>
+              </li>
+              <li class="nav-item pr-3 ">
+                <a class="nav-link text-light " href="cart.php">CART</a>
+              </li>
+              <li class="nav-item pr-3 ">
+                <a class="nav-link text-light ">BLOG</a>
+              </li>
+              <li class="nav-item pr-3 ">
+                <a class="nav-link text-light ">ABOUT</a>
+              </li>
+              <li class="nav-item pr-3 ">
+                <a class="nav-link text-light ">CONTACT</a>
+              </li>
+              <li class="nav-item dropdown pr-3 ">
+                <a class="nav-link dropdown-toggle text-light " href="#" role="button" data-toggle="dropdown" aria-expanded="false">SETTINGS</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="updateprofile.php">UPDATE PROFILE</a>
+                  <a class="dropdown-item" href="changepassword.php">UPDATE PASSWORD</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="logout.php">LOG-OUT</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
      <div class="container mt-5">
         <?php changeP(); ?>
         <div class="row">

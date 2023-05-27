@@ -1,6 +1,21 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/webazaar/resource/php/class/core/init.php';
+if(isset($_POST['submit'])){
 
+  $name = mysqli_real_escape_string($conn, $_POST['username']);
+  $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
+
+  $select = mysqli_query($conn, "SELECT * FROM `tbl_accounts` WHERE name = '$name' AND password = '$pass'") or die('query failed');
+
+  if(mysqli_num_rows($select) > 0){
+     $row = mysqli_fetch_assoc($select);
+     $_SESSION['user_id'] = $row['id'];
+     header('location:index.php');
+  }else{
+     $message[] = 'incorrect password or email!';
+  }
+
+}
  ?>
 
 <!DOCTYPE html>
@@ -14,6 +29,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/webazaar/resource/php/class/core/init.p
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="resource/css/login.css">
+  <link rel="icon" type="image/x-icon" href="resource/img/logo.png">
   </head>
   <body>
     <div class="container mt-5 pt-5">
@@ -40,7 +56,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/webazaar/resource/php/class/core/init.p
                 </div>
                 <div class="btn mb-5 pb-5">
                   <input type =hidden name="token" value="<?php echo Token::generate(); ?>">
-                  <button type="submit" class="set">LOG-IN</button>
+                  <button type="submit" name="submit" class="set">LOG-IN</button>
                 </div>
             </form>
           </div>

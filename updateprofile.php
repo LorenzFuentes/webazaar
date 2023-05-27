@@ -3,7 +3,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/webazaar/resource/php/class/core/init.p
 isLogin();
 $view = new view;
 $user = new user();
-updateProfile();
  ?>
 
 
@@ -26,7 +25,54 @@ updateProfile();
 
  </head>
  <body>
+
+ <nav class="navbar navbar-expand-lg navbar-light">
+          <button class="navbar-toggler navbar-light text-center" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon  text-center"></span>
+          </button>
+          <div class="collapse navbar-collapse align-items-center justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item pr-3 ">
+                <a class="nav-link text-light" href="index.php">HOME</a>
+              </li>
+              <li class="nav-item dropdown pr-3 ">
+                <a class="nav-link dropdown-toggle text-light " href="product.php" role="button" data-toggle="dropdown" aria-expanded="false">SHOP</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#women">WOMENS</a>
+                  <a class="dropdown-item" href="#men">MENS</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#accesories">ACCESORIES</a>
+                </div>
+              </li>
+              <li class="nav-item pr-3 ">
+                <a class="nav-link text-light " href="cart.php">CART</a>
+              </li>
+              <li class="nav-item pr-3 ">
+                <a class="nav-link text-light ">BLOG</a>
+              </li>
+              <li class="nav-item pr-3 ">
+                <a class="nav-link text-light ">ABOUT</a>
+              </li>
+              <li class="nav-item pr-3 ">
+                <a class="nav-link text-light ">CONTACT</a>
+              </li>
+              <li class="nav-item dropdown pr-3 ">
+                <a class="nav-link dropdown-toggle text-light " href="#" role="button" data-toggle="dropdown" aria-expanded="false">SETTINGS</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="updateprofile.php">UPDATE PROFILE</a>
+                  <a class="dropdown-item" href="changepassword.php">UPDATE PASSWORD</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="logout.php">LOG-OUT</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
     <div class="container mt-5 pt-5">
+        <?php updateProfile();?>
+
+    <div class="container mt-5 pt-5">
+
         <h1 class="text-center text-dark mt-4"  id="heading">UPDATE YOUR ACCOUNT</h1>
         <hr>
         <div class="row">
@@ -37,10 +83,17 @@ updateProfile();
                 <input class="form-control"  type = "text" name="username" id="username" value ="<?php echo escape($user->data()->username); ?>" placeholder="Username" autocomplete="off"  />
                 </div>
                 <div class="col">
+
+                <input class="form-control"  type = "text" name="fullName" id="fullName" value ="<?php echo escape($user->data()->name); ?>" placeholder="Full Name">
+                </div>
+                <div class="col">
+                <input class="form-control"  type = "text" name="email" id="email" value ="<?php echo escape($user->data()->email); ?>" placeholder="Email">
+
                 <input class="form-control"  type = "text" name="fullName" id="fullName" value ="<?php echo escape($user->data()->name); ?>" placeholder="Full Name"/required>
                 </div>
                 <div class="col">
                 <input class="form-control"  type = "text" name="email" id="email" value ="<?php echo escape($user->data()->email); ?>" placeholder="Email"/required>
+
                 </div>
             </div>
             <div class="row justify-content-center">

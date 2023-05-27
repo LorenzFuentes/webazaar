@@ -1,6 +1,7 @@
 <?php
 date_default_timezone_set('Asia/Manila');
 session_start();
+$conn = mysqli_connect('127.0.0.1:3307','root','','webazaar') or die('connection failed');
 $GLOBALS['config'] = array(
     'mysql'=>array(
         'host' => '127.0.0.1:3307',

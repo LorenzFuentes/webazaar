@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    background: #000000;
+  }
+  header {
+    width: 100%;
+    background-color: #000000;
+  }
+  
+  nav{
+    padding-top: 1rem;
+  }
+  .navbar-toggler {
+	background-color: #AAC4FF;
+  }
+  
+  h1{
+    font-family: 'myFirstfont';
+  }
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+    border-radius: 4px;
+  }
+  /*BEGIN*/
+  .container {
+	background: #000000;
+  }
+  .button {
+    background-color: #AAC4FF;
+    border: 2px solid #AAC4FF;
+    color: #ffffff;
+    transition: all 0.25s linear;
+    cursor: pointer;
+	font-family: "myFirstfont";
+	font-weight: 800;
+	color: black;
+  }
+  
+  .button::after {
+    position: relative;
+    right: 0;
+    content: " \276f";
+    transition: all 0.15s linear;
+  }
+  
+  .button:hover {
+    background-color: #5876ba;
+    border-color: #5876ba;
+	color: white;
+  }
+  
+  .button:hover::after {
+    right: -5px;
+  }
+  
+  .button:focus {
+    outline: none;
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+  
+  input {
+    outline: none;
+  }
+  .text-header {
+	text-align: center;
+	padding-top: 30px;
+  }
+  .header-name{
+    font-family: "myFirstfont";
+    font-size: 70px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    background: -webkit-linear-gradient(#AAC4FF, #FFFBEB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .header-name2{
+    font-family: "myFirstfont";
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    background: -webkit-linear-gradient(#AAC4FF, #FFFBEB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: auto;
+	color: white;
+  }
+ /* --- PRODUCT LIST --- */
+  
+  .products > li {
+	padding: 1rem 0;
+	border-bottom: 1px solid #ddd;
+  }
+  
+  .row {
+	position: relative;
+	overflow: auto;
+	width: 100%;
+  }
+  
+  .col,
+  .quantity,
+  .remove {
+	float: left;
+  }
+  
+  .col.left {
+	width: 70%;
+  }
+  
+  .col.right {
+	width: 30%;
+	position: absolute;
+	right: 0;
+	top: calc(50% - 30px);
+  }
+  
+  .detail {
+	padding: 0 2.5rem;
+	line-height: 2.2rem;
+  }
+  
+  .detail .name {
+	font-size: 2rem;
+	font-family: "myFirstfont";
+	font-weight: 900;
+  }
+  
+  .detail .price {
+	font-size: 1.5rem;
+  }
+  
+  .remove {
+	width: 100%;
+	text-align: center;
+  }
+  
+  .remove svg {
+	width: 60px;
+	height: 60px;
+  }
+  
+  .close {
+	fill: #7d7d7d;
+	transition: color 150ms linear, background-color 150ms linear,
+	  fill 150ms linear, 150ms opacity linear;
+	cursor: pointer;
+  }
+  
+  .close:hover {
+	fill: #de2f2f;
+  }
+  
+  /* --- SUMMARY --- */
+  .checkout {
+    float: left;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+  .checkout-footer {
+	position: sticky;
+	bottom: 0;
+	padding: 30px;
+	background-color: #000000;
+	box-shadow: 0 -10px 10px -10px #ffffff;
+	width: 300px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+  }
+  .promotion > button {
+    float: left;
+    width: 20%;
+    height: 2.4rem;
+    border-radius: 0 2rem 2rem 0;
+  }
+  
+  .checkout {
+    text-align: right;
+  }
+  
+  .checkout > .button {
+    font-size: 1.2rem;
+    padding: 0.8rem 2.8rem;
+    border-radius: 1.5rem;
+  }
+  .summary {
+	font-size: 1.2rem;
+	text-align: right;
+  }
+  .total {
+	font-size: 3rem;
+  }
+  .text-total {
+	font-size: 3rem;
+	font-family: "myFirstFont";
+  }
+
+  
+  /* --- SMALL SCREEN --- */
+  @media all and (max-width: 599px) {
+    .thumbnail img {
+      display: none;
+    }
+  
+    .quantity > input {
+      width: 40px;
+      height: 40px;
+      left: calc(50% - 20px);
+    }
+  
+    .remove svg {
+      width: 40px;
+      height: 40px;
+    }
+	.checkout-footer {
+		position:inherit;
+		width: 100%;
+	  }
+  }
+  
+  /* --- MEDIUM & LARGE SCREEN --- */
+  @media all and (min-width: 600px) {
+  
+    .container {
+      width: 100%;
+    }
+  
+    .thumbnail,
+    .detail {
+      float: left;
+    }
+  
+  
+    .checkout {
+      width: 100%;
+    }
+  
+    .checkout{
+      text-align: right;
+    }
+  }
+
+  /*END*/
+
+  span {cursor:pointer; }
+  .number{
+      margin-bottom:15px;
+	  margin-top: 8px;
+  }
+  .minus, .plus{
+    width:30px;
+    height:30px;
+	padding-top: -5px;
+    background:#AAC4FF;
+    border-radius:30px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+	color: #000000;
+  }
+  .option-btn {
+    background-color: #AAC4FF;
+    border: none;
+    color: #ffffff;
+    transition: all 0.25s linear;
+    cursor: pointer;
+	font-family: "myFirstfont";
+	font-weight: 800;
+	color: black;
+	font-size: 10px;
+    padding: 5px;
+    border-radius: 1.5rem;
+  }
+  
+  .option-btn:hover {
+    background-color: #5876ba;
+    border-color: #5876ba;
+	color: white;
+  }
+  .select{
+    height:30px;
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    border:1px solid #ddd;
+    border-radius:4px;
+    display: inline-block;
+    vertical-align: middle;
+	background:#c5d5fa;
+  }
+
+  @font-face {
+    font-family: "myFirstfont";
+    src: url(../font/TreadingDemoSerif-MVlZP.ttf);
+  }
+  

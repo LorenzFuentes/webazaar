@@ -1,4 +1,5 @@
 <?php
+
 function CheckSuccess($status){
     if($status =='Success'){
         echo '<div class="alert alert-success alert-dismissible fade show col-12" role="alert">
@@ -43,15 +44,9 @@ function pError($error){
             </button>
         </div>';
     }
-
 function vald(){
      if(input::exists()){
       if(Token::check(Input::get('Token'))){
-         if(!empty($_POST['College'])){
-             $_POST['College'] = implode(',',input::get('College'));
-         }else{
-            $_POST['College'] ="";
-         }
         $validate = new Validate;
         $validate = $validate->check($_POST,array(
             'username'=>array(
@@ -75,9 +70,6 @@ function vald(){
             ),
             'email'=>array(
                 'required'=>'true'
-            ),
-            'College'=>array(
-                'required'=>'true'
             )));
 
             if($validate->passed()){
@@ -91,7 +83,6 @@ function vald(){
                         'name'=> input::get('fullName'),
                         'joined'=>date('Y-m-d H:i:s'),
                         'groups'=>1,
-                        'colleges'=> input::get('College'),
                         'email'=> input::get('email'),
                     ));
 
@@ -112,6 +103,7 @@ function vald(){
                 }
 
                 Success();
+                Redirect::to('login.php');
             }else{
                 foreach ($validate->errors()as $error) {
                 pError($error);
@@ -140,7 +132,7 @@ function vald(){
                                  Redirect::to('index.php');
                                 echo $user->data()->groups;
                             }else{
-                                 Redirect::to('template.php');
+                                 Redirect::to('index.php');
                                 echo $user->data()->groups;
                             }
                         }else{
@@ -170,13 +162,12 @@ function profilePic(){
         echo "<img class='rounded-circle profpic img-thumbnail' alt='100x100' src='resource/img/user.jpg'/>";
     }
 }
-
 function updateProfile(){
     if(input::exists()){
-        if(!empty($_POST['College'])){
-            $_POST['College'] = implode(',',input::get('College'));
+        if(!empty($_POST['fullName'])){
+            $_POST['fullName'] = implode(',',input::get('fullName'));
         }else{
-           $_POST['College'] ="";
+           $_POST['fullName'] ="";
         }
 
         $validate = new Validate;
@@ -196,9 +187,6 @@ function updateProfile(){
                 'required'=>'true',
                 'min'=>5,
                 'max'=>50,
-            ),
-            'College'=>array(
-                'required'=>'true'
             )));
 
             if($validate->passed()){
@@ -208,13 +196,12 @@ function updateProfile(){
                     $user->update(array(
                         'username'=>input::get('username'),
                         'name'=> input::get('fullName'),
-                        'colleges'=> input::get('College'),
                         'email'=> input::get('email')
                     ));
                 } catch (Exception $e) {
                     die($e->getMessage());
                 }
-                Redirect::to('template.php');
+                Redirect::to('index.php');
             }else{
                 foreach ($validate->errors()as $error) {
                 pError($error);
@@ -255,7 +242,7 @@ function changeP(){
                     } catch (Exception $e) {
                         die($e->getMessage());
                     }
-                    Redirect::to('template.php');
+                    Redirect::to('index.php');
                 }
             }else{
                 foreach ($validate->errors()as $error) {
