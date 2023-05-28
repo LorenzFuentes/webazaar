@@ -26,6 +26,7 @@ if(isset($_POST['submit'])){
   <title>Log-in | Webazaar</title>
   <link rel="stylesheet" type="text/css"  href="vendor/css/bootstrap.min.css">
   <link href="vendor/css/all.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="resource/img/logo.png">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="resource/css/login.css">

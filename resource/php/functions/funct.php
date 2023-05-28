@@ -85,19 +85,6 @@ function vald(){
                         'groups'=>1,
                         'email'=> input::get('email'),
                     ));
-
-                    $user->createC(array(
-                        'checker'=> input::get('fullName'),
-
-                    ));
-                    $user->createV(array(
-                        'verifier'=> input::get('fullName'),
-                    ));
-
-                    $user->createR(array(
-                        'releasedby'=> input::get('fullName'),
-
-                    ));
                 } catch (Exception $e) {
                     die($e->getMessage());
                 }
@@ -164,11 +151,6 @@ function profilePic(){
 }
 function updateProfile(){
     if(input::exists()){
-        if(!empty($_POST['fullName'])){
-            $_POST['fullName'] = implode(',',input::get('fullName'));
-        }else{
-           $_POST['fullName'] ="";
-        }
 
         $validate = new Validate;
         $validate = $validate->check($_POST,array(

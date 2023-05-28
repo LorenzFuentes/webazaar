@@ -11,7 +11,7 @@ $user = new user();
  <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="icon" type="image/x-icon" href="resource/img/favicon.ico" />
+   <link rel="icon" type="image/x-icon" href="resource/img/logo.png">
    <title>Update Profile</title>
    <link rel="stylesheet" type="text/css"  href="vendor/css/bootstrap.min.css">
    <link href="vendor/css/all.css" rel="stylesheet">
@@ -38,10 +38,10 @@ $user = new user();
               <li class="nav-item dropdown pr-3 ">
                 <a class="nav-link dropdown-toggle text-light " href="product.php" role="button" data-toggle="dropdown" aria-expanded="false">SHOP</a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#women">WOMENS</a>
-                  <a class="dropdown-item" href="#men">MENS</a>
+                  <a class="dropdown-item" href="product.php#women">WOMENS</a>
+                  <a class="dropdown-item" href="product.php#men">MENS</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#accesories">ACCESORIES</a>
+                  <a class="dropdown-item" href="product.php#accesories">ACCESORIES</a>
                 </div>
               </li>
               <li class="nav-item pr-3 ">
@@ -51,7 +51,7 @@ $user = new user();
                 <a class="nav-link text-light ">BLOG</a>
               </li>
               <li class="nav-item pr-3 ">
-                <a class="nav-link text-light ">ABOUT</a>
+                <a class="nav-link text-light " href="about.html">ABOUT</a>
               </li>
               <li class="nav-item pr-3 ">
                 <a class="nav-link text-light ">CONTACT</a>
@@ -71,8 +71,6 @@ $user = new user();
     <div class="container mt-5 pt-5">
         <?php updateProfile();?>
 
-    <div class="container mt-5 pt-5">
-
         <h1 class="text-center text-dark mt-4"  id="heading">UPDATE YOUR ACCOUNT</h1>
         <hr>
         <div class="row">
@@ -88,12 +86,6 @@ $user = new user();
                 </div>
                 <div class="col">
                 <input class="form-control"  type = "text" name="email" id="email" value ="<?php echo escape($user->data()->email); ?>" placeholder="Email">
-
-                <input class="form-control"  type = "text" name="fullName" id="fullName" value ="<?php echo escape($user->data()->name); ?>" placeholder="Full Name"/required>
-                </div>
-                <div class="col">
-                <input class="form-control"  type = "text" name="email" id="email" value ="<?php echo escape($user->data()->email); ?>" placeholder="Email"/required>
-
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -106,7 +98,7 @@ $user = new user();
             </form>
         </div>
         </div>
-    </div>
+      </div>
     <div class="wave">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>

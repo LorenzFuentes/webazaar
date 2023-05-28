@@ -30,14 +30,6 @@ class user{
             return false;
         }
     }
-    public function createAppliedFor($fields){
-        if($this->_db->insert('tbl_applied_for',$fields)){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
     public function createV($fields){
         if($this->_db->insert('verifier',$fields)){
             return true;

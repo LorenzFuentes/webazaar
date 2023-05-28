@@ -66,7 +66,7 @@ if(isset($_GET['delete_all'])){
               <a class="nav-link text-light ">BLOG</a>
             </li>
             <li class="nav-item pr-3 ">
-              <a class="nav-link text-light ">ABOUT</a>
+              <a class="nav-link text-light " href="about.html">ABOUT</a>
             </li>
             <li class="nav-item pr-3 ">
               <a class="nav-link text-light ">CONTACT</a>

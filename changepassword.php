@@ -13,6 +13,7 @@ $user = new user();
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" type="text/css"  href="vendor/css/bootstrap.min.css">
    <link href="vendor/css/all.css" rel="stylesheet">
+   <link rel="icon" type="image/x-icon" href="resource/img/logo.png">
    <link rel="stylesheet" type="text/css"  href="resource/css/changepass.css">
    <link rel="stylesheet" type="text/css"  href="vendor/css/bootstrap-select.min.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,10 +36,10 @@ $user = new user();
               <li class="nav-item dropdown pr-3 ">
                 <a class="nav-link dropdown-toggle text-light " href="product.php" role="button" data-toggle="dropdown" aria-expanded="false">SHOP</a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#women">WOMENS</a>
-                  <a class="dropdown-item" href="#men">MENS</a>
+                  <a class="dropdown-item" href="product.php#women">WOMENS</a>
+                  <a class="dropdown-item" href="product.php#men">MENS</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#accesories">ACCESORIES</a>
+                  <a class="dropdown-item" href="product.php#accesories">ACCESORIES</a>
                 </div>
               </li>
               <li class="nav-item pr-3 ">
@@ -48,7 +49,7 @@ $user = new user();
                 <a class="nav-link text-light ">BLOG</a>
               </li>
               <li class="nav-item pr-3 ">
-                <a class="nav-link text-light ">ABOUT</a>
+                <a class="nav-link text-light " href="about.html">ABOUT</a>
               </li>
               <li class="nav-item pr-3 ">
                 <a class="nav-link text-light ">CONTACT</a>

@@ -45,10 +45,10 @@ isLogin();
               <a class="nav-link text-light " href="cart.php">CART</a>
             </li>
             <li class="nav-item pr-3 ">
-              <a class="nav-link text-light ">BLOG</a>
+              <a class="nav-link text-light " href="cart.php">BLOG</a>
             </li>
             <li class="nav-item pr-3 ">
-              <a class="nav-link text-light ">ABOUT</a>
+              <a class="nav-link text-light " href="about.html">ABOUT</a>
             </li>
             <li class="nav-item pr-3 ">
               <a class="nav-link text-light ">CONTACT</a>
