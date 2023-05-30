@@ -51,7 +51,7 @@ isLogin();
               <a class="nav-link text-light " href="about.html">ABOUT</a>
             </li>
             <li class="nav-item pr-3 ">
-              <a class="nav-link text-light " href="contact.html">CONTACT</a>
+              <a class="nav-link text-light " href="contact.php">CONTACT</a>
             </li>
             <li class="nav-item dropdown pr-3 ">
               <a class="nav-link dropdown-toggle text-light " href="#" role="button" data-toggle="dropdown" aria-expanded="false">SETTINGS</a>
