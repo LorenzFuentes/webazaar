@@ -1,3 +1,6 @@
+<?php
+    require_once 'resource/php/require.php';
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,10 +25,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,900&display=swap" rel="stylesheet">
     <meta content="" name="keywords">
-    <title>Contact | Webazaar</title>
+    <title>CONTACT | Webazaar</title>
       </head>
       <body>
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-dark">
           <button class="navbar-toggler text-center" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon  text-center"></span>
           </button>
@@ -37,10 +40,10 @@
               <li class="nav-item dropdown pr-3 ">
                 <a class="nav-link dropdown-toggle text-light " href="#" role="button" data-toggle="dropdown" aria-expanded="false">SHOP</a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="product.php#women">WOMENS</a>
-                  <a class="dropdown-item" href="product.php#men">MENS</a>
+                  <a class="dropdown-item" href="product#women.php">WOMENS</a>
+                  <a class="dropdown-item" href="product#men.php">MENS</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="product.php#accesories">ACCESORIES</a>
+                  <a class="dropdown-item" href="product#accesories.php">ACCESORIES</a>
                 </div>
               </li>
               <li class="nav-item pr-3 ">
@@ -53,81 +56,93 @@
                 <a class="nav-link text-light " href="about.html">ABOUT</a>
               </li>
               <li class="nav-item pr-3 ">
-                <a class="nav-link text-light " href="contact.html">CONTACT</a>
+                <a class="nav-link text-light " href="contact.php">CONTACT</a>
               </li>
               <li class="nav-item dropdown pr-3 ">
-                <a class="nav-link dropdown-toggle text-light " href="#" role="button" data-toggle="dropdown" aria-expanded="false">SETTINGS</a>
+                <a class="nav-link dropdown-toggle text-light " hre f="#" role="button" data-toggle="dropdown" aria-expanded="false">SETTINGS</a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="updateprofile.php">UPDATE PROFILE</a>
                   <a class="dropdown-item" href="changepassword.php">UPDATE PASSWORD</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="logout.php">LOG-OUT</a>
+                  <a class="dropdown-item" href="#">LOG-OUT</a>
                 </div>
               </li>
             </ul>
           </div>
         </nav>
 
-        <section class="contact">
-
-
-        <div class="container">
-        <h1>Connect With Us</h1>
-        <p>Feel free to get in touch with us</p>
-        <div class="contact-box">
-          <div class="contact-left">
-            <h3>Send your request here</h3>
-            <form method="post" action="send-email.php">
-              <div class="input-row">
-                <div class="input-group">
-                  <label>Name</label>
-                  <input type="text" placeholder="Your Name">
-
-                </div>
-
-                <div class="input-group">
-                  <label>Phone</label>
-                  <input type="text" placeholder="+69">
+        <section id="contact">
+  
+          <div class="p-3 text-center container animate__fadeInUp">
+            <h1 class="animate__animated animate__fadeInUp header-name" >CONTACT</h1>
+          </div>
+          
+          <div class="contact-wrapper">
+          
+          <!-- Left contact page --> 
+            
+            <form id="contact-form" class="form-horizontal" role="form" method="POST">
+               
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
                 </div>
               </div>
-
-              <div class="input-row">
-                <div class="input-group">
-                  <label>Email</label>
-                  <input type="text" placeholder="@gmail.com">
-                </div>
-
-                <div class="input-group">
-                  <label>Subject</label>
-                  <input type="text" placeholder="Hello!">
+        
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
                 </div>
               </div>
-
-              <label>Message</label>
-              <textarea  rows="5" placeholder="Your Message" ></textarea>
-              <button type="submit">SEND</button>
+        
+              <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+              
+              <button class="btn send-button" id="submit" name="email-send" type="submit" value="SEND">
+                <div class="alt-send-button">
+                  <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+                </div>
+              
+              </button>
+              <?php email() ; ?>
             </form>
+            
+          <!-- Left contact page --> 
+            
+              <div class="direct-contact-container">
+        
+                <ul class="contact-list">
+                  <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Malolos, Bulacan</span></i></li>
+                  
+                  <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone">(000) 000-0000</span></i></li>
+                  
+                  <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail">webazaar123@gmail.com</span></i></li>
+                  
+                </ul>
+        
+                <hr>
+                <ul class="social-media-list">
+                  <li><a href="#" target="_blank" class="contact-icon">
+                    <i class="fa fa-github" aria-hidden="true"></i></a>
+                  </li>
+                  <li><a href="#" target="_blank" class="contact-icon">
+                    <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  </li>
+                  <li><a href="#" target="_blank" class="contact-icon">
+                    <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  </li>
+                  <li><a href="#" target="_blank" class="contact-icon">
+                    <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  </li>       
+                </ul>
+                <hr>
+        
+                <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+        
+              </div>
+            
           </div>
-          <div class="contact-right">
-            <h3>Reach Out To Us</h3>
-            <table>
-              <tr>
-                <td>Email</td>
-                <td><i class="fa-solid fa-envelope"></i>&nbsp;ContactUsGrp5@Gmail.com</td>
-              </tr>
-              <tr>
-                <td>Phone</td>
-                <td><i class="fa-solid fa-phone"></i>&nbsp;+69 993 672 2982</td>
-              </tr>
-              <tr>
-                <td>Address</td>
-                <td><i class="fa-solid fa-location-dot"></i>&nbsp;Km. 44 McArthur Highway, Malolos City, Bulacan</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
-  </section>
+          
+        </section>  
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

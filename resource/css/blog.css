@@ -29,7 +29,9 @@ header1 {
   background-position: center;
   background-size: cover;
 }
-
+.navbar-toggler{
+  background:  #AAC4FF;
+}
 nav{
   padding-top: 1rem;
 }

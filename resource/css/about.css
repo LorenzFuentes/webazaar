@@ -24,7 +24,9 @@ header {
 nav{
   padding-top: 1rem;
 }
-
+.navbar-toggler{
+  background:  #AAC4FF;
+}
 .section{
   padding: 1rem;
   background-color: black;
