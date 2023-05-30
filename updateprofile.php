@@ -48,13 +48,13 @@ $user = new user();
                 <a class="nav-link text-light " href="cart.php">CART</a>
               </li>
               <li class="nav-item pr-3 ">
-                <a class="nav-link text-light ">BLOG</a>
+                <a class="nav-link text-light " href="blog.php">BLOG</a>
               </li>
               <li class="nav-item pr-3 ">
                 <a class="nav-link text-light " href="about.html">ABOUT</a>
               </li>
               <li class="nav-item pr-3 ">
-                <a class="nav-link text-light ">CONTACT</a>
+                <a class="nav-link text-light " href="contact.html">CONTACT</a>
               </li>
               <li class="nav-item dropdown pr-3 ">
                 <a class="nav-link dropdown-toggle text-light " href="#" role="button" data-toggle="dropdown" aria-expanded="false">SETTINGS</a>

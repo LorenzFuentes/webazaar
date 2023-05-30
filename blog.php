@@ -25,7 +25,7 @@ isLogin();
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,900&display=swap" rel="stylesheet">
-  <title>Webazaar</title>
+  <title>BLOG | Webazaar</title>
   <meta content="" name="keywords">
 
   <!-- Favicons -->
@@ -65,23 +65,23 @@ isLogin();
             <li class="nav-item dropdown pr-3 ">
               <a class="nav-link dropdown-toggle text-dark " href="#" role="button" data-toggle="dropdown" aria-expanded="false">SHOP</a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="product.php">WOMENS</a>
-                <a class="dropdown-item" href="product.php">MENS</a>
+                <a class="dropdown-item" href="product#women.php">WOMENS</a>
+                <a class="dropdown-item" href="product#men.php">MENS</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="product.php">ACCESORIES</a>
+                <a class="dropdown-item" href="product#accesories.php">ACCESORIES</a>
               </div>
             </li>
             <li class="nav-item pr-3 ">
-              <a class="nav-link text-dark " href="#">FEATURES</a>
+              <a class="nav-link text-dark " href="cart.php">CART</a>
             </li>
             <li class="nav-item pr-3 ">
               <a class="nav-link text-dark " href="blog.php">BLOG</a>
             </li>
             <li class="nav-item pr-3 ">
-              <a class="nav-link text-dark ">ABOUT</a>
+              <a class="nav-link text-dark " href="about.html">ABOUT</a>
             </li>
             <li class="nav-item pr-3 ">
-              <a class="nav-link text-dark ">CONTACT</a>
+              <a class="nav-link text-dark " href="contact.html">CONTACT</a>
             </li>
             <li class="nav-item dropdown pr-3 ">
               <a class="nav-link dropdown-toggle text-dark " hre f="#" role="button" data-toggle="dropdown" aria-expanded="false">SETTINGS</a>
@@ -104,10 +104,7 @@ isLogin();
       <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
         <h1>Blog</h1>
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>Blog</li>
-        </ol>
+
 
       </div>
     </div><!-- End Breadcrumbs -->
@@ -130,13 +127,6 @@ isLogin();
               </div>
 
               <h2 class="title">See how I Shop When I have no Time</h2>
-
-              <div class="meta-top">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">J$J</a></li>
-
-                </ul>
-              </div><!-- End meta top -->
 
               <div class="content">
                 <p>
